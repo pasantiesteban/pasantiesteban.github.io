@@ -1,286 +1,956 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Priscila Santiesteban</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2020.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family:serif}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  #right {  
-  width: 200px;  
-  height: 200px;  
-  object-fit: contain;  
-  
-  object-position: right bottom;  
-  }  
+  <title>Priscila Santiesteban</title>
+
+  <meta
+    name="description"
+    content="Priscila Santiesteban is a Computer Science and Engineering Ph.D. candidate at the University of Michigan."
+  >
+
+  <style>
+    :root {
+      --text: #303030;
+      --muted: #6b6b6b;
+      --link: #8b3f3a;
+      --border: #dddddd;
+      --background: #ffffff;
+      --sidebar-width: 245px;
+      --content-width: 760px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--background);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+      color: #222222;
+    }
+
+    h1 {
+      margin: 0 0 1.6rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin: 2.4rem 0 0.9rem;
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    h3 {
+      margin: 1.7rem 0 0.45rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    ul,
+    ol {
+      margin-top: 0.5rem;
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    .top-nav {
+      border-bottom: 1px solid var(--border);
+      background: white;
+      border: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      
+    }
+
+    .top-nav-inner {
+      width: min(1080px, calc(100% - 2rem));
+      min-height: 58px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+
+      gap: 1.4rem;
+    }
+
+    .top-nav a {
+    display: inline-block;
+
+    padding: 0.45rem 0.8rem;
+
+    border-radius: 5px;
+
+    color: #333;
+    font-size: 0.95rem;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+    
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  #right {  
-  width: 400px;  
-  height: 400px;  
-  object-fit: contain;  
-  
-  object-position: right top; 
-  }  
+.top-nav a:hover,
+.top-nav a:focus {
+    background-color: #f3f3f3;
+    color: #111;
+    text-decoration: none;
 }
 
+    .top-nav .site-name {
+      margin-right: auto;
+      font-weight: 600;
+    }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  #right {  
-  width: 400px;  
-  height: 400px;  
-  object-fit: contain;  
-  
-  object-position: right top;  
-  }  
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  #right {  
-  width: 400px;  
-  height: 400px;  
-  object-fit: contain;  
-  
-  object-position: right top;  
-  }  
-} 
-
-@media only screen and (min-width: 1200px) {
-  #right {  
-  width: 400px;  
-  height: 400px;  
-  object-fit: contain;  
-  
-  object-position: right top;  
-  }  
-}
- 
-#center {  
-  width: 400px;  
-  height: 150px;   
-  background-color: lightgreen;  
-  object-fit: contain;  
-  object-position: center top;  
-  }  
-  #left {  
-  width: 300px;  
-  height: 300px;  
-  
-  object-fit: contain;  
-  object-position: center;  
-  }  
-   
-
-  .pic {
-  float: right;
-  width: 38%;
-
-  
-}
-
-.name {
-  float: right;
-  width: 60%;
-  object-position: bottom;
-
-  
-}
-
-.titlepadding {
-  padding-left: 50px;
-  padding-top: 32px;
-
-  
-}
-
-li{
-  margin: 25px 0;
-}
-
-
-</style>
-</head>
-<body class="w3-2020-brilliant-white">
-
-<div class="w3-bar w3-2020-lark w3-large" style="height:60px;">
-	<a href="#top" class="w3-bar-item w3-button " style="margin-top: 10px ;">Home</a>
-	<a href="#publications" class="w3-bar-item w3-button" style="margin-top: 10px ;">Publications</a>
-	<a href="https://github.com/pasantiesteban" class="w3-bar-item w3-button" style="margin-top: 10px ;">GitHub</a>
-	<a href="https://docs.google.com/document/d/1zPgrbyXnu4a2BTSjV6-vJ6pynTkpG_RwiAyLLWl793I/edit?usp=sharing" class="w3-bar-item w3-button" style="margin-top: 10px ;">CV</a>
-</div>
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1200px;">
-
-  <!-- The Grid -->
-  
-    <!-- Left Column -->
-   
-   
-
-    <!-- Right Column -->
-    <div class="w3-row ">
     
 
-		<div class="w3-container w3-card w3-2020-navy-blazer w3-margin-bottom w3-margin-top">
-			
-			<div class="w3-container">
-				<div class="pic" >
-					<img id = "right" src= "Santiesteban-P.jpg"/>  
-				</div>
-				<div class="name" >
-					<h1 class="w3-text-white w3-padding-32 w3-xxxlarge"> <b>Priscila Santiesteban</b> </h1>
-            <div class="w3-container">
-              <h3 class="w3-text-white"><b>Computer Science & Engineering Ph.D. Candidate</b></h3>
-              <h4 class="w3-text-white">Aug. 2021 - <span class="w3-tag w3-2020-lark w3-round">Current</span></h4>
-              <h5>University of Michigan, Ann Arbor</h5>
-              <hr>
-            </div>
-          
-				</div>
-			 
-			</div>
-	
-			 
-		</div>
-		
-		<div class="w3-container w3-card w3-white w3-margin-bottom " style="margin-top: 100px ;" >
-			<h2 class="w3-text-navy-blazer titlepadding" > <b>About</b></h2>
-			<div class="w3-container" >
-        <div class="w3-container" style="float:left; width: 70%;margin-left:40px ;">
-			    <h5 class="w3-text-navy-blazer" >
-            I am a Ph.D. candidate in Computer Science and Engineering at the University of Michigan and
-            am advised by Professor Westley Weimer. 
-            I am a software engineering researcher interested in the human factors of software development. 
-            My research investigates the cognitive, social, and behavioral factors that 
-            influence how people develop software. 
-            Through controlled human-subjects studies and empirical software engineering methods, 
-            I seek to better understand software engineering practice and inform the design of developer tools and programming pedagogy.
-            <h5 class="w3-text-navy-blazer">  
-          </h5>
-			    <hr>
-        </div>
-       <!--- <div class="w3-container" style="float:right ; width:auto; ">
-					<img id = "left" src= "IMG_8461.JPG"/>  
-				</div>-->
-     
-			</div>
-		  </div>
-		
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-navy-blazer titlepadding"><b>Academic Highlights</b></h2>
-        <div class="w3-container " style= "margin-left:60px ;">
-            <h6> <b>Aug. 2025 - May 2026:</b>  Instructor on Record for EECS481: Software Engineering at the University of Michigan  </h6>
-            <hr>
-            <h6> <b>April 2023:</b>  Awarded the NSF Graduate Research Fellowship 
-              (<a style="color:#a64841" >Personal Statement (avaliable upon request) </a>, 
-              <a style="color:#a64841" href="NSF Statements 2023/NSF Research Statement.pdf">Research Statement</a>)</h6>
-            <hr>
-            <h6> <b>Feb.  2023:</b> Passed the Qualifying Exams</h6>
-            <hr>
-            <h6><b>Aug.  2021:</b> Started the CSE Ph.D. at the University of Michigan: Funded by the Rackham Merit Fellowship </h6>
-            <hr>
-            <h6> <b>May   2021:</b>  Graduated from Coe College with a BA in Computer Science and Physics</h6>
-            <hr>
-         
-        </div>
-       
+    .layout {
+      width: min(1080px, calc(100% - 2rem));
+      margin: 2.5rem auto 4rem;
+      display: grid;
+      grid-template-columns: var(--sidebar-width) minmax(0, var(--content-width));
+      gap: 4.5rem;
+      align-items: start;
+    }
+
+    .profile {
+      position: sticky;
+      top: 5rem;
+      z-index: 1;
+    }
+
+ .profile-photo {
+    width: 225px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 12px;
+}
+
+    .profile-name {
+      margin: 1.1rem 0 0.15rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    .pronouns {
+      margin: 0 0 0.8rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .profile-role {
+      margin: 0 0 0.8rem;
+      line-height: 1.45;
+    }
+
+    .profile-affiliation {
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    .job-market {
+      margin: 1rem 0;
+      font-weight: 600;
+    }
+
+    .profile-links {
+      margin: 1.1rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .profile-links li {
+      margin-bottom: 0.35rem;
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .content section {
+      scroll-margin-top: 5rem;
+    }
+
+    .content section + section {
+      margin-top: 3.2rem;
+      padding-top: 0.2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .intro {
+      font-size: 1.02rem;
+    }
+
+    .course,
+    .mentee,
+    .research-topic {
+      margin-bottom: 1.5rem;
+    }
+
+    .course p,
+    .mentee p,
+    .research-topic p {
+      margin-bottom: 0.45rem;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .publication-list {
+      padding-left: 1.25rem;
+    }
+
+    .publication-list li {
+      margin-bottom: 1.15rem;
+    }
+
+    .publication-title {
+      font-weight: 600;
+    }
+
+    .publication-venue {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .award {
+      font-weight: 600;
+    }
+
+    .fixme {
+      padding: 0.9rem 1rem;
+      color: #654d13;
+      background: #fff8df;
+      border-left: 3px solid #d7b34d;
+    }
+
+    .notice {
+    margin: 0 0 2rem;
+
+    padding: 1rem 1.25rem;
+
+    background: #fff9e8;
+    border: 1px solid #ead89a;
+    border-left: 5px solid #c9a227;
+    border-radius: 3px;
+    }
+
+   .news {
+    margin: 1.5rem 0 2rem;
+    padding: 1rem 1.25rem;
+
+    background: #f7f7f7;
+    border: 1px solid #e2e2e2;
+    border-left: 4px solid #9a9a9a;
+    border-radius: 3px;
+}
+
+.news h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1rem;
+}
+
+.news ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.news li {
+    margin-bottom: 0.45rem;
+}
+
+    footer {
+      width: min(1080px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1.5rem 0 2.5rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+  @media (max-width: 780px) {
+  .top-nav-inner {
+    padding: 0.7rem 0;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+  }
+
+  .top-nav .site-name {
+    width: 100%;
+
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .profile {
+    position: static;
+
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    column-gap: 1.25rem;
+    align-items: start;
+
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .profile-photo {
+    grid-column: 1;
+    grid-row: 1 / span 6;
+
+    width: 120px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 10px;
+  }
+
+  .profile-name,
+  .pronouns,
+  .profile-role,
+  .profile-affiliation,
+  .job-market,
+  .profile-links {
+    grid-column: 2;
+  }
+
+  .profile-name {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+
+
+  .profile-role {
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+  }
+
+  .profile-affiliation {
+    margin-bottom: 0.65rem;
+    font-size: 0.92rem;
+  }
+
+  .profile-links {
+    margin-top: 0.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+  }
+
+  .profile-links li {
+    margin: 0;
+  }
+
+  .job-market {
+    display: none;
+  }
+
+  .content section {
+      scroll-margin-top: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+  .layout {
+    width: calc(100% - 1.25rem);
+  }
+
+  .profile {
+    grid-template-columns: 95px 1fr;
+    column-gap: 1rem;
+  }
+
+  .profile-photo {
+    width: 95px;
+  }
+
+  .profile-name {
+    font-size: 1.3rem;
+  }
+
+  .profile-role,
+  .profile-affiliation {
+    font-size: 0.88rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+   .content section {
+      scroll-margin-top: 10rem;
+    }
+}
+}
+  </style>
+</head>
+
+<body id="home">
+
+  <header class="top-nav" >
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <nav class="top-nav-inner" aria-label="Primary navigation">
+
+      <a class="site-name" href="#home">
+        <i class="fa-solid fa-house"></i> 
+        Priscila Santiesteban
+      </a>
+
+      <a href="#teaching">Teaching</a>
+      <a href="#mentoring">Mentoring</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+
+      <a href="Priscila_Santiesteban___CV.pdf">
+        CV
+      </a>
+
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="profile" aria-label="Profile">
+      <!-- FIXME: Confirm this image filename. -->
+      <img
+        class="profile-photo"
+        src="Santiesteban-P.jpg"
+        alt="Portrait of Priscila Santiesteban"
+      >
+
+      <p class="profile-name">Priscila Santiesteban</p>
+
+
+      <p class="profile-role">
+        Computer Science and Engineering Ph.D. Candidate
+      </p>
+
+      <p class="profile-affiliation">
+        University of Michigan, Ann Arbor
+      </p>
+
+      <p class="job-market">
+      
+      </p>
+
+      <ul class="profile-links">
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:pasanti@umich.edu">Email</a>
+        </li>
+
+        <li>
+          <i class="fa-brands fa-square-github"></i>
+          <a href="https://github.com/pasantiesteban">GitHub</a>
+        </li>
+
+        <li>
+          <i class="fa-brands fa-google-scholar"></i>
+          <a href="https://scholar.google.com/citations?user=MiFoERcAAAAJ&hl=en">Google Scholar</a>
+        </li>
+
+        <!-- FIXME: Add ORCID URL, or remove. -->
+        <!-- <li><a href="YOUR-URL">ORCID</a></li> -->
+
+        <!-- FIXME: Confirm LinkedIn URL. -->
+        <!-- <li><a href="YOUR-URL">LinkedIn</a></li> -->
+      </ul>
+    </aside>
+
+   
+
+    <main class="content" >
+
+     <div class="notice">
+  <strong>I am in the academic job market.</strong>
+  I am currently seeking a teaching-focused faculty position in computer science for Fall 2027.
+  Please feel free to <a href="Priscila_Santiesteban___CV.pdf"> view my CV</a> or <a href="mailto:pasanti@umich.edu"> contact me</a> if you think I may be
+  a good fit for your department. 
       </div>
 
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-navy-blazer titlepadding"><b>Research Interests</b></h2>
-        <div class="w3-container " style= "float:left; width: 70%;margin-left:40px ;">
-          <h3>Cognition and Programming</h3>
-          <p>Functional Neuroimaging – scanning of brain activity – has provided researchers with an
-            understanding of the relationship between activity in certain brain regions and specific 
-            mental functions, and is being increasingly applied to study cognitive processes of programming. 
-            I believe neuroimaging studies have potential positive implications for pedagogy, such as student 
-            retention and academic support.</p>
-          <p><em>Indicative Project: Towards a Cognitive Model of Dynamic
-            Debugging: Does Identifier Construction Matter? </em></p>
-          <h3></h3>
-          <p></p>
-          <p><em>(Block in the works) </em></p>
-          
+      <section id="about">
+        <h1>About</h1>
+
+        <div class="intro">
+          <p>
+            I am a Ph.D. candidate in Computer Science and Engineering at the
+            University of Michigan, where I am advised by Professor Westley
+            Weimer. My areas of research broadly span software engineering and human factors.
+          </p>
+
+          <p>
+            I also help maintain the <a href="https://csguides.github.io/grad-school-application-guide/" > CS Grad Application Guide</a>, which provides 
+            resources and guidance for prospective applicants to computer science graduate programs.
+
+          <!-- FIXME:
+            Replace the preceding paragraph with a polished two- or
+            three-sentence faculty introduction drawn from your application
+            materials.
+          -->
         </div>
-       
-      </div>
-      <div class="w3-container w3-card w3-white">
-        <h2 id="publications" class="w3-text-navy-blazer titlepadding"><b>Publications</b></h2>
-        <div class="w3-container " style= "margin-left:40px ;">
-          <h3> Peer-Reviewed Publications</h3>
-          <p>Further details can be found in <a style="color:#a64841" href="https://docs.google.com/document/d/1zPgrbyXnu4a2BTSjV6-vJ6pynTkpG_RwiAyLLWl793I/edit?usp=sharing"> my CV</a> </p>
-          <ol reversed>
-            <li>Amy Wei, <b>Priscila Santiesteban</b>, Westley Weimer: <a style="color:#a64841" href=""> <b> Sweat the Details: Exercise Breaks and AI Assistance in Code Summarization,</b> </a> 
-              <em> in IEEE Transactions on Software Engineering (TSE), 2026. </em>  
-              [
-              <a style="color:#a64841" href="https://github.com/pasantiesteban/25-Code-Summarization-Exercise-AI">Replication Packaage</a>
-              ]
-            </li>
+      </section>
 
-            <li><b>Priscila Santiesteban</b>, Emma Shedden, Madeline Endres, Westley Weimer: <a style="color:#a64841" href="Papers/chats-icseseet2026.pdf"> <b> An Empirical Study of Anonymous, Unmoderated, and Online Peer-to-Peer Programming Tutoring Conversations,</b> </a> 
-              <em> in Software Engineering Education and Training at the International Conference on Software Engineering (SEET@ICSE), 2026. </em>  
-              [
-              <a style="color:#a64841" href="https://github.com/pasantiesteban/ICSE_SEET2026_Chats">Replication Packaage</a>
-              ]
-            </li>
+  <div class="news">
 
-            <li>Danniell Hu, <b>Priscila Santiesteban</b>, Madeline Endres, Westley Weimer: <a style="color:#a64841" href="Papers/DYNAMIC-DEBUGGING-TSE2024.pdf"> <b>Towards a Cognitive Model of Dynamic Debugging: Does Identifier Construction Matter?, 
-            </b> </a> <em> in IEEE Transactions on Software Engineering (TSE), 2024. </em> 
+<h2>Recent Highlights</h2>
+
+<ul>
+
+<li>
+<strong>Aug. 2026.</strong>
+Received the Computer Science and Engineering Outstanding Graduate Student Instructor Award for my teaching in Winter 2026.
+</li>
+
+<li>
+<strong>April 2024.</strong>
+Received an ACM Distinguished Paper Award at ICSE.
+</li>
+
+<li>
+<strong>April 2023.</strong>
+Awarded the NSF Graduate Research Fellowship 
+              (Personal Statement (avaliable upon request), 
+              <a  href="NSF Statements 2023/NSF Research Statement.pdf">Research Statement (avaliable)</a>)</h6>
+</li>
+
+<li>
+<strong>Feb. 2023.</strong>
+Passed the Qualifying Exams
+</li>
+
+</ul>
+
+</div>
+
+ <section id="teaching">
+  <h1>Teaching</h1>
+
+  <h2>Instructor of Record</h2>
+
+  <div class="course">
+
+    <h3>EECS 481: Software Engineering</h3>
+
+    <p class="meta">
+      University of Michigan
+    </p>
+
+    <ul class="teaching-offerings">
+
+      <li>
+        <strong>Winter 2026</strong>
+
+        <div class="course-links">
+          <a href="https://web.eecs.umich.edu/~weimerw/2026-481W/">
+            Course webpage
+          </a>
+
+          <span>·</span>
+
+          <a href="FIXME_W26_EVALS">
+            Teaching evaluations
+          </a>
+        </div>
+      </li>
+
+      
+      <li>
+        <strong>Fall 2025</strong>
+
+        <div class="course-links">
+          <a href="https://web.eecs.umich.edu/~weimerw/2025-481F/">
+            Course webpage
+          </a>
+
+          <span>·</span>
+
+          <a href="FIXME_F25_EVALS">
+            Teaching evaluations
+          </a>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <h2>Other Teaching Experience</h2>
+
+  <div class="course">
+
+    <h3>EECS 481: Software Engineering</h3>
+
+    <p class="meta">
+      Graduate Student Instructor (Teaching Assistant),
+      University of Michigan · Fall 2024
+    </p>
+
+
+  </div>
+
+  <div class="course">
+
+    <h3>EECS 590: Advanced Programming Languages</h3>
+
+    <p class="meta">
+      Course Staff,
+      University of Michigan · Winter 2025
+    </p>
+
+
+  </div>
+
+  <div class="course">
+
+    <h3>CS125: Introduction to Computer Science I</h3>
+
+    <p class="meta">
+      Undergraduate Teaching Assistant,
+      Coe College · Spring 2019
+    </p>
+
+
+  </div>
+
+</section>
+  
+
+  
+      
+
+      <section id="research">
+        <h1>Research</h1>
+
+        <p>
+          My research lies in the human aspects of software engineering. 
+          I use empirical methods to understand how developers, 
+          particularly novice developers and student programmers, 
+          reason about code, debug software, collaborate, and 
+          use development tools.
+        </p>
+
+        <div class="research-topic">
+          <h2>Programming Cognition</h2>
+
+          <p>
+           I investigate how developers reason about code while performing 
+           software engineering tasks.
+           My work uses both objective (e.g., medical imaging) and self-reported 
+           (e.g., surveys) methods to better understand the 
+           cognitive processes that shape programming performance, 
+           with the goal of informing the design of software engineering 
+           tools and instructional strategies that better support programmers.
+          </p>
+
+          <p>
+            <strong>Indicative paper(s):</strong>
+            <li>
+              Towards a Cognitive Model of Dynamic Debugging: Does Identifier
+              Construction Matter?
+            </li>
+            <li>
+              Causal Relationships and Programming Outcomes: A Transcranial
+              Magnetic Stimulation Experiment.
+            </li>
+          </p>
+        </div>
+
+        <div class="research-topic">
+          <h2>Programming Interactions</h2>
+
+          <p>
+            I study how developers interact with one another and with software
+            engineering tools while completing programming tasks. My work examines
+            peer support, communication, and developer-tool interactions to better
+            understand how these interactions influence programming outcomes.
+          </p>
+
+          <p>
+            <strong>Indicative paper(s):</strong>
+            <li>
+              An Empirical Study of Anonymous, Unmoderated, and Online
+              Peer-to-Peer Programming Tutoring Conversations
+            </li>
+            <li>
+               CirFix: Automated Hardware Repair and Its Real-World Applications
+            </li>
+             <!-- Exercise and AI paper fits here-->
+            <!-- Cirfix and automated program repair fits here-->
+          </p>
+        </div>
+
+      
+         <div class="research-topic">
+          <h2>Programming Environments</h2>
+
+          <p>
+            I investigate the behavioral factors that influence programming outcomes. 
+            My work examines how developers' behaviors, as well as the educational 
+            and professional environments in which they work, shape programming 
+            performance, collaboration, and evaluation.
+          </p>
+
+          <p>
+            <strong>Indicative paper(s):</strong>
+             <li>
+              Sweat the Details: Exercise Breaks and AI Assistance in Code
+              Summarization.
+            </li>
+             <li>
+              An Analysis of Sex Differences in Computing Teaching
+              Evaluations.
+             </li>
+          </p>
+        </div>
+
+          
+
+      </section>
+
+      <section id="publications">
+        <h1>Peer-Reviewed Publications</h1>
+
+        <ol class="publication-list" reversed>
+          <li>
+            Amy Wei, <strong>Priscila Santiesteban</strong>, and Westley
+            Weimer.
+            <a 
+            class="publication-title"
+            href="Papers/tse2026-breaks-ai.pdf"
+            >
+              Sweat the Details: Exercise Breaks and AI Assistance in Code
+              Summarization.
+            </span>
+            <span class="publication-venue">
+              IEEE Transactions on Software Engineering, 2026.
+            </span>
             [
-            <a style="color:#a64841" href="https://github.com/pasantiesteban/TSE24-fNIRS-DEBUGGING">Data and Materials</a>, 
-            <a style="color:#a64841" href="Slides/santiesteban-fnirs-icse25.pdf">Slides</a>, 
-            <a style="color:#a64841" href="https://web.eecs.umich.edu/~weimerw/p/ICSE2025-Talk-Santiesteban.mp4">Conference Talk</a>
+            <a href="https://github.com/pasantiesteban/25-Code-Summarization-Exercise-AI">
+              replication package
+            </a>
+            ]
+            <!-- FIXME: Add paper link. -->
+          </li>
+
+          <li>
+            <strong>Priscila Santiesteban</strong>, Emma Shedden, Madeline
+            Endres, and Westley Weimer.
+            <a
+              class="publication-title"
+              href="Papers/chats-icseseet2026.pdf"
+            >
+              An Empirical Study of Anonymous, Unmoderated, and Online
+              Peer-to-Peer Programming Tutoring Conversations.
+            </a>
+            <span class="publication-venue">SEET@ICSE, 2026.</span>
+            [
+            <a href="https://github.com/pasantiesteban/ICSE_SEET2026_Chats">
+              replication package
+            </a>
             ]
           </li>
-  
-            <li>Hammad Ahmad, Madeline Endres, Kaia Newman, <b>Priscila Santiesteban</b>, Emma Shedden, Westley Weimer: <a style="color:#a64841" href="Papers/TMS-ICSE-2024.pdf"> <b> Causal Relationships and Programming Outcomes: A Transcranial Magnetic Stimulation Experiment, 
-            </b> </a> <em> in International Conference on Software Engineering (ICSE), 2024. 
-           </em> [<a style="color:#a64841" href="https://github.com/pasantiesteban/ICSE24_TMS">Artifact</a>, <a style="color:#a64841" href="https://cse.engin.umich.edu/stories/the-hidden-brain-power-behind-programming">News Coverage</a>] <b> (Distinguished Paper Award) </b></li>
-  
-            <li><b>Priscila Santiesteban</b>, Yu Huang, Hammad Ahmad, Westley Weimer: <a style="color:#a64841" href="Papers/CIRFIX_TSE.pdf"> <b>  CirFix: Automated Hardware Repair and its
-            Real World Applications,</b> </a> <em> in IEEE Transactions on Software Engineering (TSE), 2023. 
-         </em> [<a style="color:#a64841" href="https://docs.google.com/presentation/d/1MxT0ZTch8ESmHB7i_R_bfBi1FLtXbbGm/edit?usp=sharing&ouid=106824178209901200460&rtpof=true&sd=true">Slide Deck</a>, <a style="color:#a64841" href="https://github.com/pasantiesteban/CirFix_Repair">Artifact</a>] </li>
 
-          <li><b>Priscila Santiesteban</b>, Madeline Endres, Westley Weimer: <a style="color:#a64841" href="Papers/GE_ICSE_2022.pdf"> <b>  An Analysis of Sex Differences in Computing Teaching Evaluations,
-             </b> </a> <em> in 3rd Workshop on Gender Equality, Diversity, and Inclusion in Software Engineering (GE@ICSE), 2022. 
-          </em> [<a style="color:#a64841" href="https://github.com/pasantiesteban/GE_2022">Dataset</a>, <a style="color:#a64841" href="https://www.youtube.com/watch?v=BSkutlTYvUw">Conference Talk</a>]</li>
+          <li>
+            Danniell Hu, <strong>Priscila Santiesteban</strong>, Madeline
+            Endres, and Westley Weimer.
+            <a
+              class="publication-title"
+              href="Papers/DYNAMIC-DEBUGGING-TSE2024.pdf"
+            >
+              Towards a Cognitive Model of Dynamic Debugging: Does Identifier
+              Construction Matter?
+            </a>
+            <span class="publication-venue">
+              IEEE Transactions on Software Engineering, 2024.
+            </span>
+            [
+            <a href="https://github.com/pasantiesteban/TSE24-fNIRS-DEBUGGING">
+              data and materials
+            </a>
+            ]
+          </li>
 
-          <li>Chu-Pan Wong, <b>Priscila Santiesteban</b>, Christian Kästner, Claire Le Goues: <a style="color:#a64841" href="Papers/FSE_2021.pdf"> <b> VarFix: 
-          balencing edit effectivness in automated program repair,</b> </a> <em> in issue on the proceedings
-            of the 29th ACM on European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE), 2021.
-          </em></li>
+          <li>
+            Hammad Ahmad, Madeline Endres, Kaia Newman,
+            <strong>Priscila Santiesteban</strong>, Emma Shedden, and Westley
+            Weimer.
+            <a class="publication-title" href="Papers/TMS-ICSE-2024.pdf">
+              Causal Relationships and Programming Outcomes: A Transcranial
+              Magnetic Stimulation Experiment.
+            </a>
+            <span class="publication-venue">ICSE, 2024.</span>
+            <span class="award">ACM Distinguished Paper Award.</span>
+            [
+            <a href="https://github.com/pasantiesteban/ICSE24_TMS">
+              artifact
+            </a>
+            ]
+          </li>
+
+          <li>
+            <strong>Priscila Santiesteban</strong>, Yu Huang, Hammad Ahmad,
+            and Westley Weimer.
+            <a class="publication-title" href="Papers/CIRFIX_TSE.pdf">
+              CirFix: Automated Hardware Repair and Its Real-World
+              Applications.
+            </a>
+            <span class="publication-venue">
+              IEEE Transactions on Software Engineering, 2023.
+            </span>
+            [
+            <a href="https://github.com/pasantiesteban/CirFix_Repair">
+              artifact
+            </a>
+            ]
+          </li>
+
+          <li>
+            <strong>Priscila Santiesteban</strong>, Madeline Endres, and
+            Westley Weimer.
+            <a class="publication-title" href="Papers/GE_ICSE_2022.pdf">
+              An Analysis of Sex Differences in Computing Teaching
+              Evaluations.
+            </a>
+            <span class="publication-venue">GE@ICSE, 2022.</span>
+            [
+            <a href="https://github.com/pasantiesteban/GE_2022">dataset</a>
+            ]
+          </li>
+
+          <li>
+            Chu-Pan Wong, <strong>Priscila Santiesteban</strong>, Christian
+            Kästner, and Claire Le Goues.
+            <a class="publication-title" href="Papers/FSE_2021.pdf">
+              VarFix: Balancing Edit Effectiveness in Automated Program
+              Repair.
+            </a>
+            <span class="publication-venue">ESEC/FSE, 2021.</span>
+
+            <!-- FIXME:
+              Confirm the paper's exact official title and capitalization.
+            -->
+          </li>
         </ol>
-        </div>
-      </div>
+      </section>
 
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
+
+      <section id="mentoring">
+      
+        <h1>Undergraduate Researchers</h1>
+
+          <div class="student">
+
+            <h3>Amy Wei</h3>
+
+              <p class="meta">
+              University of Michigan (2025-2026).
+              Now Ph.D. student in Computer Science at the University of Massachussets-Amherst.
+              First author on
+              <a href="Papers/tse2026-breaks-ai.pdf">
+            Sweat the Details: Exercise Breaks and AI Assistance in Code Summarization
+            </a>.
+              </p>
+
+          </div>
+
+          <div class="student">
+
+            <h3>Emma Shedden</h3>
+
+              <p class="meta">
+              University of Michigan (2024-2025).
+              Now Ph.D. student in Computer Science at the University of Pennsylvania.
+              Co-author on
+              <a href="Papers/chats-icseseet2026.pdf">
+            An Empirical Study of Anonymous, Unmoderated, and Online
+              Peer-to-Peer Programming Tutoring Conversations.
+            </a>
+              </p>
+
+          </div>
+
+          <div class="student">
+
+            <h3>Danniell Hu</h3>
+
+              <p class="meta">
+              University of Michigan (2022-2023).
+              Now Ph.D. student in Computer Science at the University of Michigan.
+              First author on
+              <a href="Papers/DYNAMIC-DEBUGGING-TSE2024.pdf">
+            Towards a Cognitive Model of Dynamic Debugging: Does Identifier
+              Construction Matter?
+            </a>
+              </p>
+
+          </div>
+
+      
+    </section>
+
+
+      <section id="contact">
+        <h1>Contact</h1>
+
+        <p>
+          The best way to reach me is by email at
+          <a href="mailto:pasanti@umich.edu">pasanti@umich.edu</a>.
+        </p>
+      </section>
+
+
+
+    </main>
   </div>
-  
-  <!-- End Page Container -->
-</div>
 
-<footer class="w3-container w3-win8-steel w3-center w3-margin-top">
-  <p><em> Priscila Santiesteban, University of Michigan CSE Ph.D. Candidate </em></p>
-  <p class="fa fa-envelope" > pasanti@umich.edu &emsp;</p> 
-  <p class="fa fa-github"> pasantiesteban &emsp;</p>
-  <p class="fa fa-globe "> https://pasantiesteban.github.io/ps.gitbub.io/ &emsp;</p>
-  <p class="fa fa-linkedin "> priscila.santiesteban &emsp;</p>
-</footer>
-
+  <footer>
+    © Priscila Santiesteban · University of Michigan
+  </footer>
 </body>
 </html>
